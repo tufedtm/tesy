@@ -1,0 +1,21 @@
+{
+  "name": "hw",
+  "authors": [
+    "tufedtm <tufedtm@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.7.1"
+  }
+}

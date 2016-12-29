@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-env": "^1.0.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "vue": "^2.1.4",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.4",
+    "webpack": "^1.14.0"
+  }
+}

@@ -1,0 +1,53 @@
+- hosts: scaleway
+  gather_facts: no
+
+  tasks:
+    - name: add pgpro repo
+      apt_repository:
+        repo: deb http://repo.postgrespro.ru/pgpro-9.6/ubuntu xenial main
+        filename: postgrespro
+
+    - name: add pgpro key
+      apt_key:
+        url: 'http://repo.postgrespro.ru/pgpro-9.6/keys/GPG-KEY-POSTGRESPRO'
+
+    - name: install pgpro packages
+      apt: name={{ item }} state=latest autoremove=yes
+      with_items:
+        - postgrespro
+        - python-psycopg2
+
+- hosts: scaleway
+  become: yes
+  become_user: postgres
+  gather_facts: no
+
+  vars:
+    dbname: tesyDB
+    dbuser: tesyUSER
+    dbpass: tesyPASS
+
+  tasks:
+    - name: create database
+      postgresql_db: >
+        name={{ dbname }}
+
+    - name: ensure user has access to database
+      postgresql_user: >
+        db={{ dbname }}
+        name={{ dbuser }}
+        password={{ dbpass }}
+        priv=ALL
+
+    - name: ensure user does not have unnecessary privilege
+      postgresql_user: >
+        name={{ dbuser }}
+        role_attr_flags=NOSUPERUSER,NOCREATEDB
+    
+    - name: ensure no other user can access the database
+      postgresql_privs: >
+        db={{ dbname }}
+        role=PUBLIC
+        type=database
+        priv=ALL
+        state=absent

@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "browserify -t vueify -e main.js -o build.js",
+    "watch": "watchify -t vueify -e main.js -o build.js"
+  },
+  "dependencies": {
+    "vue": "^2.1.4"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "coffee-script": "^1.12.1",
+    "jade": "^1.11.0",
+    "stylus": "^0.54.5",
+    "vueify": "^9.3.0",
+    "watchify": "^3.7.0"
+  }
+}

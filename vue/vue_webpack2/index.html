@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+
+  <title>SHOP</title>
+
+  <link rel="shortcut icon" sizes="32x32" href="/images/shop-icon-32.png">
+
+  <meta name="theme-color" content="#fff">
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="import" href="/src/shop-app.html" async="">
+
+  <style>body {
+    margin: 0;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  shop-app[unresolved] {
+    display: block;
+    min-height: 101vh;
+    line-height: 68px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: #202020;
+    padding: 0 16px;
+    overflow: visible;
+  }</style>
+
+  <link rel="prefetch" href="/bower_components/polymer/polymer.html">
+  <link rel="prefetch" href="/bower_components/polymer/polymer-mini.html">
+  <link rel="prefetch" href="/bower_components/polymer/polymer-micro.html">
+  <link rel="prefetch" href="/bower_components/app-layout/app-header/app-header.html">
+  <link rel="prefetch" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="prefetch" href="/bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+  <link rel="prefetch" href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects-behavior.html">
+  <link rel="prefetch" href="/bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html">
+  <link rel="prefetch" href="/bower_components/app-layout/helpers/helpers.html">
+  <link rel="prefetch" href="/bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
+  <link rel="prefetch" href="/bower_components/app-layout/app-toolbar/app-toolbar.html">
+  <link rel="prefetch" href="/bower_components/app-route/app-location.html">
+  <link rel="prefetch" href="/bower_components/iron-location/iron-location.html">
+  <link rel="prefetch" href="/bower_components/iron-location/iron-query-params.html">
+  <link rel="prefetch" href="/bower_components/app-route/app-route-converter-behavior.html">
+  <link rel="prefetch" href="/bower_components/app-route/app-route.html">
+  <link rel="prefetch" href="/bower_components/iron-media-query/iron-media-query.html">
+  <link rel="prefetch" href="/bower_components/iron-pages/iron-pages.html">
+  <link rel="prefetch" href="/bower_components/iron-selector/iron-selectable.html">
+  <link rel="prefetch" href="/bower_components/iron-selector/iron-selection.html">
+  <link rel="prefetch" href="/bower_components/iron-selector/iron-selector.html">
+  <link rel="prefetch" href="/bower_components/iron-selector/iron-multi-selectable.html">
+  <link rel="prefetch" href="/src/shop-category-data.html">
+  <link rel="prefetch" href="/src/shop-home.html">
+  <link rel="prefetch" href="/src/shop-button.html">
+  <link rel="prefetch" href="/src/shop-image.html">
+</head>
+<body>
+
+<shop-app unresolved="">SHOP</shop-app>
+
+<script>window.performance && performance.mark && performance.mark("index.html"), Polymer = {
+    lazyRegister: !0,
+    dom: "shadow"
+}, function () {
+    if ("registerElement" in document && "import" in document.createElement("link") && "content" in document.createElement("template")); else {
+        var e = document.createElement("script");
+        e.src = "/bower_components/webcomponentsjs/webcomponents-lite.min.js", document.body.appendChild(e)
+    }
+}();</script>
+
+
+</body>
+</html>

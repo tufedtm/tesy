@@ -1,0 +1,26 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="hell-world">
+  <style>
+    h1 {
+      font-size: 15px;
+    }
+  </style>
+
+  <template>
+    <h1>Hello <strong>{{ what }}</strong></h1>
+  </template>
+
+  <script>
+    Polymer({
+        is: 'hell-world',
+        properties: {
+            what: {
+                type: String,
+                value: 'asd'
+            }
+        }
+    });
+  </script>
+
+</dom-module>

@@ -1,0 +1,15 @@
+- hosts: scaleway
+  gather_facts: no
+
+  tasks:
+    - name: add nginx repo
+      apt_repository:
+        repo: ppa:nginx/development
+        filename: nginx
+
+    - name: install nginx packages
+      apt: >
+        name={{ item }}
+        state=latest
+      with_items:
+        - nginx

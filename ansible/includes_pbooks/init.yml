@@ -1,0 +1,8 @@
+- hosts: scaleway
+  gather_facts: no
+
+  tasks:
+    - name: apt update && upgrade
+      apt:
+        update_cache: yes
+        upgrade: dist

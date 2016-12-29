@@ -1,0 +1,5 @@
+[servers:children]
+scaleway
+
+[scaleway]
+c2fd9026-bf60-4e7e-b17c-9a24d17a42f2.pub.cloud.scaleway.com
