@@ -24,7 +24,7 @@
   .special {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
     font-size: 12px;
   }
 
