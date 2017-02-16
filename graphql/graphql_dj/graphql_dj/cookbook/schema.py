@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
-from graphene import relay, AbstractType, ObjectType
-from graphene_django import DjangoObjectType
+from graphene import relay, AbstractType, ObjectType, ClientIDMutation
+from graphene_django.types import DjangoObjectType
 from graphene_django.filter import DjangoFilterConnectionField
 
 from cookbook.models import Category, Ingredient
@@ -63,3 +63,7 @@ class Query(AbstractType):
             return User.objects.none()
         else:
             return User.objects.filter(id=context.user.id)
+
+
+class CreateIngredient(ClientIDMutation):
+    pass
