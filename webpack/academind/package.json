@@ -1,0 +1,13 @@
+{
+  "homepage": "https://www.youtube.com/playlist?list=PL55RiY5tL51rcCnrOrZixuOsZhAHHy6os",
+  "scripts": {
+    "build": "webpack-dev-server",
+    "build:prod": "webpack -p"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
