@@ -2,4 +2,5 @@
 __pycache__/
 env/
 bower_components/
+dist/
 node_modules/
